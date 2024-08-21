@@ -40,31 +40,62 @@ public class PlayerMovememt : MonoBehaviour
         
 
 
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector3 camForward = cam.forward;
+        Vector3 camRight = cam.right;
 
-        if (direction.magnitude >= 0.1f)
+        camForward.y = 0; // Keep movement on the horizontal plane
+        camRight.y = 0;
+
+        camForward.Normalize();
+        camRight.Normalize();
+
+        // Movement direction
+        Vector3 moveDirection = camForward * vertical + camRight * horizontal;
+        moveDirection.Normalize();
+
+        if (vertical != 0)
         {
-            // Calculate the target angle based on camera direction
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-
-            // Smooth rotation towards the target angle
+            // Calculate the target angle based on camera direction and vertical input
+            float targetAngle = Mathf.Atan2(camForward.x, camForward.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref maxRotation, 0.1f);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        }
 
-            // Move the player in the direction they are facing
-            Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            Vector3 newVelocity = moveDirection * maxSpeed;
-            newVelocity.y = rb.velocity.y;
-            rb.velocity = newVelocity;
-        }
-        else
-        {
-            // Maintain vertical velocity when not moving
-            Vector3 newVelocity = rb.velocity;
-            newVelocity.x = 0;
-            newVelocity.z = 0;
-            rb.velocity = newVelocity;
-        }
+        // Calculate new velocity for movement (forward/backward or strafing)
+        Vector3 newVelocity = moveDirection * maxSpeed;
+        newVelocity.y = rb.velocity.y; // Preserve vertical velocity for jumping/falling
+        rb.velocity = newVelocity;
+
+
+
+        // Vector3 strafe = transform.right * horizontal * maxSpeed;
+
+        // Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        // if (direction.magnitude >= 0.1f)
+        // {
+        //     // debug.drawline, debug.draw arrow
+        //     // Calculate the target angle based on camera direction
+        //     float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+
+        //     // Smooth rotation towards the target angle
+        //     float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref maxRotation, 0.1f);
+        //     // transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+        //     // Move the player in the direction they are facing
+        //     Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        //     Vector3 newVelocity = moveDirection * maxSpeed;
+        //     newVelocity.y = rb.velocity.y;
+        //     rb.velocity = newVelocity; //+ strafe;
+        // }
+        // else
+        // {
+        //     // Maintain vertical velocity when not moving
+        //     Vector3 newVelocity = rb.velocity;
+        //     newVelocity.x = 0;
+        //     newVelocity.z = 0;
+        //     rb.velocity = newVelocity;
+        // }
 
 
 
