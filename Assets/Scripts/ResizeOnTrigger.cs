@@ -36,9 +36,7 @@ public class ResizeOnTrigger : MonoBehaviour {
                 //call the function that allows the player to shrink
                 GetComponent<PlayerSizing>().shrink();
             }
-            // if(Input.GetKey(KeyCode.X)){
-            //     //call the function that allows the player to cut wood
-            // }
+
         }
         
     } 

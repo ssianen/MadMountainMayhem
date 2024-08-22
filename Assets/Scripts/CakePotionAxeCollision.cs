@@ -48,6 +48,21 @@ public class CakePotionAxeCollision : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerExit(Collider other){ //after the collision, the abilities are acquired
+        if(other.gameObject.tag == "Player") {
+            if(Input.GetKey(KeyCode.E)){
+                //call the function that allows the player to grow
+                GetComponent<PlayerSizing>().grow();
+            }
+            if(Input.GetKey(KeyCode.Q)){
+                //call the function that allows the player to shrink
+                GetComponent<PlayerSizing>().shrink();
+            }
+
+        }
+        
+    } 
     
 }
 

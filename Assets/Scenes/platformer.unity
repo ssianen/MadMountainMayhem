@@ -344,7 +344,6 @@ GameObject:
   - component: {fileID: 522587238}
   - component: {fileID: 522587239}
   - component: {fileID: 522587240}
-  - component: {fileID: 522587241}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -475,21 +474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b7f0421375b403799ae9dd579ad35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &522587241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522587233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f08beea78a01490287a006ded687214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CakeIcon: {fileID: 0}
-  PotionIcon: {fileID: 0}
-  AxeIcon: {fileID: 0}
 --- !u!1 &655825508
 GameObject:
   m_ObjectHideFlags: 0
