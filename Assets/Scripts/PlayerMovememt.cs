@@ -16,14 +16,13 @@ public class PlayerMovememt : MonoBehaviour
 
 
     public Transform cam;
-
-    
+    // private Animator animatorVal;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+        // animatorVal = GetComponent<Animator>();
     }
 
     private void Update()
@@ -66,7 +65,13 @@ public class PlayerMovememt : MonoBehaviour
         newVelocity.y = rb.velocity.y; // Preserve vertical velocity for jumping/falling
         rb.velocity = newVelocity;
 
-
+        // Animations
+        // if(rb.velocity == Vector3.zero){
+        //     animatorVal.SetFloat("Speed", 0);
+        // }
+        // else {
+        //     animatorVal.SetFloat("Speed", 1);
+        // }
 
         // Vector3 strafe = transform.right * horizontal * maxSpeed;
 
@@ -74,16 +79,24 @@ public class PlayerMovememt : MonoBehaviour
 
         // if (direction.magnitude >= 0.1f)
         // {
+
+        //     if (vertical != 0)
+        //     {
+        //         // Calculate the target angle based on camera direction and vertical input
+        //         float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+        //         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref maxRotation, 0.1f);
+        //         transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        //     }
         //     // debug.drawline, debug.draw arrow
         //     // Calculate the target angle based on camera direction
-        //     float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+        //     // float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
 
         //     // Smooth rotation towards the target angle
-        //     float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref maxRotation, 0.1f);
+        //     // float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref maxRotation, 0.1f);
         //     // transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
         //     // Move the player in the direction they are facing
-        //     Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        //     Vector3 moveDirection = Quaternion.Euler(0f, transform.eulerAngles.y, 0f) * Vector3.forward;
         //     Vector3 newVelocity = moveDirection * maxSpeed;
         //     newVelocity.y = rb.velocity.y;
         //     rb.velocity = newVelocity; //+ strafe;
