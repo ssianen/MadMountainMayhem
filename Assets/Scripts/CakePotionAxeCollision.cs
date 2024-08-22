@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CakePotionAxeCollision : MonoBehaviour
 {
-    public GameObject CakeIcon; //check to see if these have to correspond with something?
+    public GameObject CakeIcon;
 
     public GameObject PotionIcon;
 
@@ -33,13 +33,15 @@ public class CakePotionAxeCollision : MonoBehaviour
                 this.gameObject.SetActive(false); //item in scene disappears
 
 
-            } else if ((this.gameObject.tag == "Potion")){
+            } 
+            if ((this.gameObject.tag == "Potion")){
 
                 //Potion icon should appear on HUD/GUI
                 PotionIcon.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
 
-            } else if ((this.gameObject.tag == "Axe")){
+            } 
+            if ((this.gameObject.tag == "Axe")){
 
                 //Axe icon should appear on HUD/GUI
                 AxeIcon.SetActive(true);
@@ -49,20 +51,20 @@ public class CakePotionAxeCollision : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other){ //after the collision, the abilities are acquired
-        if(other.gameObject.tag == "Player") {
-            if(Input.GetKey(KeyCode.E)){
-                //call the function that allows the player to grow
-                GetComponent<PlayerSizing>().grow();
-            }
-            if(Input.GetKey(KeyCode.Q)){
-                //call the function that allows the player to shrink
-                GetComponent<PlayerSizing>().shrink();
-            }
+    // private void OnTriggerExit(Collider other){ //after the collision, the abilities are acquired
+    //     if(other.gameObject.tag == "Player") {
+    //         if(Input.GetKey(KeyCode.E)){
+    //             //call the function that allows the player to grow
+    //             other.gameObject.GetComponent<PlayerSizing>().grow();
+    //         }
+    //         if(Input.GetKey(KeyCode.Q)){
+    //             //call the function that allows the player to shrink
+    //             other.gameObject.GetComponent<PlayerSizing>().shrink();
+    //         }
 
-        }
+    //     }
         
-    } 
+    // } 
     
 }
 

@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrunkScale: {x: 3, y: 3, z: 3}
-  grownScale: {x: 3, y: 3, z: 3}
+  grownScale: {x: 2, y: 2, z: 2}
   time: 3
 --- !u!114 &522587240
 MonoBehaviour:
@@ -474,6 +474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b7f0421375b403799ae9dd579ad35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CakeIcon: {fileID: 461545964}
+  PotionIcon: {fileID: 659222312}
 --- !u!1 &655825508
 GameObject:
   m_ObjectHideFlags: 0
