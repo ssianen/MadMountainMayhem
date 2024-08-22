@@ -30,20 +30,20 @@ public class CakePotionAxeCollision : MonoBehaviour
 
                 //Cake icon should appear on HUD/GUI
                 CakeIcon.SetActive(true);
-                this.gameObject.SetActive(false); //item in scene disappears; causing the player to also disappear
+                this.gameObject.SetActive(false); //item in scene disappears
 
 
             } else if ((this.gameObject.tag == "Potion")){
 
                 //Potion icon should appear on HUD/GUI
                 PotionIcon.SetActive(true);
-                this.gameObject.SetActive(false); //item in scene disappears; causing the player to also disappear
+                this.gameObject.SetActive(false); //item in scene disappears
 
             } else if ((this.gameObject.tag == "Axe")){
 
                 //Axe icon should appear on HUD/GUI
                 AxeIcon.SetActive(true);
-                this.gameObject.SetActive(false); //item in scene disappears; causing the player to also disappear
+                this.gameObject.SetActive(false); //item in scene disappears
             }
 
         }
