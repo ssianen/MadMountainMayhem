@@ -9,6 +9,9 @@ TagManager:
   - shrink
   - grow
   - Cake
+  - Potion
+  - Axe
+  - CakeIcon
   layers:
   - Default
   - TransparentFX

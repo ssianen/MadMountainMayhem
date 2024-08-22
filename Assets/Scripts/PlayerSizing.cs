@@ -135,7 +135,7 @@ public class PlayerSizing : MonoBehaviour
         timePassed = 0.0f;
     }
 
-    public void originalSize()
+    public void originalSize() //this should only be triggered if resized boolean has been set to true
     {
         active = true;
         action = Actions.NORMALIZING;
