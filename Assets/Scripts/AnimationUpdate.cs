@@ -18,8 +18,8 @@ public class AnimationUpdate : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         // Movement direction
-        Vector3 moveDirection = transform.forward * (vertical + horizontal);
-        Vector3 newVelocity = moveDirection * 2;
+        Vector3 moveDirectionVert = transform.forward * vertical;
+        Vector3 newVelocity = moveDirectionVert * 2;
         // Animations
         if(newVelocity == Vector3.zero){
             animatorVal.SetFloat("Speed", 0);
