@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - MovingPlatform
+  - normal_size
+  - shrink
+  - grow
+  - Cake
+  - Potion
+  - Axe
+  - CakeIcon
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class PlayerMovememt : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float maxSpeed;
     public float maxRotation;
