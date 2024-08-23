@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 7
   maxRotation: 180
-  jumpForce: 7
+  jumpForce: 5
   jumpCheckPos: {fileID: 352435992}
 --- !u!54 &70862025
 Rigidbody:
@@ -812,7 +812,7 @@ Transform:
   m_GameObject: {fileID: 787802142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.64, y: 19.4, z: 42.13}
+  m_LocalPosition: {x: 87.81, y: 19.4, z: 46.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1375,7 +1375,7 @@ Transform:
   m_GameObject: {fileID: 1321001888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.5, y: 0, z: -0.3}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2044,7 +2044,7 @@ Transform:
   m_GameObject: {fileID: 1971673566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.49, y: 0, z: 0}
+  m_LocalPosition: {x: 3.49, y: 0, z: 1.32}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
