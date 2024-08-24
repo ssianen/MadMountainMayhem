@@ -14,7 +14,6 @@ public class ResizePlayer : MonoBehaviour {
 
     private bool smallSized = false;
     private bool regularSized = true;
-
     private bool largeSized = false;
 
 
