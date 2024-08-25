@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Adapted from https://discussions.unity.com/t/does-any-know-how-to-hide-and-show-2d-sprites-in-unity-5-by-using-a-2d-boxcollider-set-to-trigger-when-player-collides-with-the-boxcollider/142839
 
-public class CakePotionAxeCollision : MonoBehaviour
+public class CakePotionCollision : MonoBehaviour
 {
     public GameObject CakeIcon;
 
@@ -50,21 +49,6 @@ public class CakePotionAxeCollision : MonoBehaviour
 
         }
     }
-
-    // private void OnTriggerExit(Collider other){ //after the collision, the abilities are acquired
-    //     if(other.gameObject.tag == "Player") {
-    //         if(Input.GetKey(KeyCode.E)){
-    //             //call the function that allows the player to grow
-    //             other.gameObject.GetComponent<PlayerSizing>().grow();
-    //         }
-    //         if(Input.GetKey(KeyCode.Q)){
-    //             //call the function that allows the player to shrink
-    //             other.gameObject.GetComponent<PlayerSizing>().shrink();
-    //         }
-
-    //     }
-        
-    // } 
     
 }
 
