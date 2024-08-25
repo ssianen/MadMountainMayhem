@@ -1112,68 +1112,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6f20640ef65e99147b34d258c6c4ffe6, type: 3}
   m_PrefabInstance: {fileID: 1107829926}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &610878085
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.1027765
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.6660323
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      propertyPath: m_Name
-      value: QueenStand
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: -8700617353114198275, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-    - {fileID: 65702495048144492, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2012972491}
-  m_SourcePrefab: {fileID: 100100000, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
 --- !u!1 &830876062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,32 +2499,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943419795}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2012972489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
-  m_PrefabInstance: {fileID: 610878085}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2012972491
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012972489}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 78d28b4b45e492544ad3c190ff700f91, type: 3}
-  m_Controller: {fileID: 9100000, guid: 46e3ea74b5816ed42b8681d6b30ebbd5, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2108156093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,4 +2809,3 @@ SceneRoots:
   - {fileID: 1136038174}
   - {fileID: 2108156095}
   - {fileID: 885241675}
-  - {fileID: 610878085}

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AnimationUpdate : MonoBehaviour
@@ -22,17 +23,23 @@ public class AnimationUpdate : MonoBehaviour
         Vector3 newVelocity = moveDirectionVert * 2;
         // Animations
         
+        bool isSprinting = FindObjectOfType<PlayerMovememt>().GetSprint();
+        bool isJumping = FindObjectOfType<PlayerMovememt>().GetJump();
 
-        if(FindObjectOfType<PlayerMovememt>().GetVelocity() == Vector3.zero){
-            animatorVal.SetFloat("Speed", 0);
-        }
-        else if (FindObjectOfType<PlayerMovememt>().GetSprint()){
-            animatorVal.SetFloat("Speed", 3);
-        } else if (FindObjectOfType<PlayerMovememt>().GetJump()) {
+        if (isJumping) {
             animatorVal.SetBool("Jump", true);
         } else {
-            animatorVal.SetFloat("Speed", 1);
             animatorVal.SetBool("Jump", false);
+        }
+        if(FindObjectOfType<PlayerMovememt>().GetVelocity().x == 0 && FindObjectOfType<PlayerMovememt>().GetVelocity().z == 0){
+            animatorVal.SetFloat("Speed", 0);
+        }
+        else if (isSprinting){
+            animatorVal.SetFloat("Speed", 3);
+            
+        }  else if (!isJumping){
+            animatorVal.SetFloat("Speed", 1);
+            
         }
 
         // if(newVelocity == Vector3.zero){
