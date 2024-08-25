@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class AnimationUpdate : MonoBehaviour
@@ -31,6 +32,34 @@ public class AnimationUpdate : MonoBehaviour
         } else {
             animatorVal.SetBool("Jump", false);
         }
+
+        if (horizontal < 0) {
+            animatorVal.SetBool("StrafeLeft", true);
+            animatorVal.SetBool("StrafeRight", false);
+        } else if (horizontal > 0) {
+            animatorVal.SetBool("StrafeLeft", false);
+            animatorVal.SetBool("StrafeRight", true);
+        } else {
+            animatorVal.SetBool("StrafeLeft", false);
+            animatorVal.SetBool("StrafeRight", false);
+        }
+
+        if (vertical == 0) {
+            animatorVal.SetBool("Forward", false);
+        } else {
+            animatorVal.SetBool("Forward", true);
+        }
+        // if (horizontal != 0 && vertical == 0) {
+        //     animatorVal.SetBool("StrafeLeft", true);
+        //     animatorVal.SetBool("StrafeRight", false);
+        // } else if (FindObjectOfType<PlayerMovememt>().GetVelocity().x > 0){
+        //     animatorVal.SetBool("StrafeRight", true);
+        //     animatorVal.SetBool("StrafeLeft", false);
+        // } else {
+        //     animatorVal.SetBool("StrafeRight", false);
+        //     animatorVal.SetBool("StrafeLeft", false);
+        // }
+
         if(FindObjectOfType<PlayerMovememt>().GetVelocity().x == 0 && FindObjectOfType<PlayerMovememt>().GetVelocity().z == 0){
             animatorVal.SetFloat("Speed", 0);
         }
