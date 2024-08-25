@@ -49,16 +49,6 @@ public class AnimationUpdate : MonoBehaviour
         } else {
             animatorVal.SetBool("Forward", true);
         }
-        // if (horizontal != 0 && vertical == 0) {
-        //     animatorVal.SetBool("StrafeLeft", true);
-        //     animatorVal.SetBool("StrafeRight", false);
-        // } else if (FindObjectOfType<PlayerMovememt>().GetVelocity().x > 0){
-        //     animatorVal.SetBool("StrafeRight", true);
-        //     animatorVal.SetBool("StrafeLeft", false);
-        // } else {
-        //     animatorVal.SetBool("StrafeRight", false);
-        //     animatorVal.SetBool("StrafeLeft", false);
-        // }
 
         if(FindObjectOfType<PlayerMovememt>().GetVelocity().x == 0 && FindObjectOfType<PlayerMovememt>().GetVelocity().z == 0){
             animatorVal.SetFloat("Speed", 0);
@@ -70,14 +60,5 @@ public class AnimationUpdate : MonoBehaviour
             animatorVal.SetFloat("Speed", 1);
             
         }
-
-        // if(newVelocity == Vector3.zero){
-        //     animatorVal.SetFloat("Speed", 0);
-        // }
-        // else if (Input.GetKey(KeyCode.LeftShift)){
-        //     animatorVal.SetFloat("Speed", 3);
-        // } else {
-        //     animatorVal.SetFloat("Speed", 1);
-        // }
     }
 }
