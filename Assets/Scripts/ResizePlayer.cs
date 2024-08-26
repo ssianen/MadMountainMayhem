@@ -127,6 +127,17 @@ public class ResizePlayer : MonoBehaviour {
 
         }
     }
+
+    public int GetSize() {
+        if (smallSized) {
+            return 1;
+        } else if (regularSized) {
+            return 2;
+        } else if (largeSized) {
+            return 3;
+        }
+        return 0;
+    }
 }
 
 
