@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc97367604c12db458ec10d6031978c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 3
+  changeTime: 15
   sceneName: final-platformer
 --- !u!4 &447746268
 Transform:
