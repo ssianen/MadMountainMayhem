@@ -1033,10 +1033,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 2029279080}
   SFXSource: {fileID: 2121590821}
+  background: {fileID: 8300000, guid: 5bd1fcf98a6064856898185ae72919c0, type: 3}
   growing: {fileID: 8300000, guid: 5d86328c7e579448caae116c036fbd02, type: 3}
   shrinking: {fileID: 8300000, guid: ec765ee2eb59a41f8824d29742c1a3e3, type: 3}
-  chopping: {fileID: 0}
-  collecting: {fileID: 0}
+  chopping: {fileID: 8300000, guid: e7fd68afafe934c499bb6fb095610f2f, type: 3}
+  collecting: {fileID: 8300000, guid: c6acd4ee4e6be4e7e8b5f891319b8ac7, type: 3}
 --- !u!4 &188812365
 Transform:
   m_ObjectHideFlags: 0
@@ -2298,9 +2299,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c708223349a404e88d9451a1502f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 6
+  maxSpeed: 7
+  smallSizedSpeedMult: 0.5
+  largeSizedSpeedMult: 2
+  regularSizedSpeed: 6
   maxRotation: 180
   jumpForce: 7
+  smallSizedJumpMult: 1
+  largeSizedJumpMult: 1.5
+  regularSizedJump: 7
   jumpCheckPos: {fileID: 1688318599}
   sprintMult: 2
   cam: {fileID: 2125981542}
@@ -3334,7 +3341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CakeIcon: {fileID: 461545964}
   PotionIcon: {fileID: 659222312}
-  AxeIcon: {fileID: 1329368448}
 --- !u!1 &656151414
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,7 +5564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CakeIcon: {fileID: 461545964}
   PotionIcon: {fileID: 659222312}
-  AxeIcon: {fileID: 1329368448}
 --- !u!1 &1462879358
 GameObject:
   m_ObjectHideFlags: 0
