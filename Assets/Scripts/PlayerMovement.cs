@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+
 // using System.Numerics;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -9,9 +11,15 @@ using UnityEngine.UIElements;
 public class PlayerMovement : MonoBehaviour
 {
     public float maxSpeed;
+    public float smallSizedSpeedMult = 0.5f;
+    public float largeSizedSpeedMult = 2.0f;
+    public float regularSizedSpeed = 6f;
     public float maxRotation;
     private Rigidbody rb;
-    public float jumpForce = 7f;
+    public float jumpForce;
+    public float smallSizedJumpMult = 0.75f;
+    public float largeSizedJumpMult = 2.0f;
+    public float regularSizedJump = 7f;
     public Transform jumpCheckPos;
     private bool isJump = false;
     private bool isSprint = false;
@@ -23,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        // animatorVal = GetComponent<Animator>();
     }
     
     // called every frame
@@ -46,8 +53,6 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        
-
 
         Vector3 camForward = cam.forward;
         Vector3 camRight = cam.right;
@@ -57,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
         camForward.Normalize();
         camRight.Normalize();
+
+        AssignSize();
 
         // Movement direction
         Vector3 moveDirection = camForward * vertical + camRight * horizontal;
@@ -88,19 +95,28 @@ public class PlayerMovement : MonoBehaviour
         newVelocity.y = rb.velocity.y; // Preserve vertical velocity for jumping/falling
         rb.velocity = newVelocity;
 
-        // Vector3 newVelocity = transform.forward * vertical * maxSpeed;
-        // newVelocity.y = rb.velocity.y;
-        // rb.velocity = newVelocity;
-
         if(isJump && (Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground")).Length > 0))
         {
             rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
             isJump = false;
         }
 
-        // transform.Rotate(Vector3.up, horizontal * maxRotation * Time.fixedDeltaTime, 0f);
+    }
 
-        // Debug.Log("Print");
+    private void AssignSize() {
+        int size = FindObjectOfType<ResizePlayer>().GetSize();
+        if (size == 1) {
+            maxSpeed = smallSizedSpeedMult * regularSizedSpeed;
+            jumpForce = smallSizedJumpMult * regularSizedJump;
+        } else if (size == 2) {
+            maxSpeed = regularSizedSpeed;
+            jumpForce = regularSizedJump;
+        } else if (size == 3) {
+            maxSpeed = largeSizedSpeedMult * regularSizedSpeed;
+            jumpForce = largeSizedJumpMult * regularSizedJump;
+        } else {
+            Debug.Log("Error: Size variables assigned incorrectly");
+        }
     }
 
     public bool GetSprint() {

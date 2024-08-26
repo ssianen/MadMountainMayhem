@@ -2299,9 +2299,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c708223349a404e88d9451a1502f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 6
+  maxSpeed: 7
+  smallSizedSpeedMult: 0.5
+  largeSizedSpeedMult: 2
+  regularSizedSpeed: 6
   maxRotation: 180
   jumpForce: 7
+  smallSizedJumpMult: 0.75
+  largeSizedJumpMult: 2
+  regularSizedJump: 7
   jumpCheckPos: {fileID: 1688318599}
   sprintMult: 2
   cam: {fileID: 2125981542}
