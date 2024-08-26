@@ -1437,8 +1437,8 @@ MonoBehaviour:
   SFXSource: {fileID: 2121590821}
   growing: {fileID: 8300000, guid: 5d86328c7e579448caae116c036fbd02, type: 3}
   shrinking: {fileID: 8300000, guid: ec765ee2eb59a41f8824d29742c1a3e3, type: 3}
-  chopping: {fileID: 0}
-  collecting: {fileID: 0}
+  chopping: {fileID: 8300000, guid: e7fd68afafe934c499bb6fb095610f2f, type: 3}
+  collecting: {fileID: 8300000, guid: c6acd4ee4e6be4e7e8b5f891319b8ac7, type: 3}
 --- !u!4 &188812365
 Transform:
   m_ObjectHideFlags: 0
@@ -5873,7 +5873,7 @@ Transform:
   m_GameObject: {fileID: 1492959628}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000005344303, y: 0.4427904, z: -0.000000026392367, w: 0.89662516}
-  m_LocalPosition: {x: 0, y: -0.00000047683716, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7449,7 +7449,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5bd1fcf98a6064856898185ae72919c0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
