@@ -6,11 +6,18 @@ using UnityEngine.UI;
 
 public class CakePotionCollision : MonoBehaviour
 {
+
     public GameObject CakeIcon;
 
     public GameObject PotionIcon;
 
     public GameObject AxeIcon;
+
+    AudioManager audioManager;
+
+    private void Awake() {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     
 
     void Start() {
@@ -31,6 +38,9 @@ public class CakePotionCollision : MonoBehaviour
                 CakeIcon.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
 
+                //play collection sound effect
+                // audioManager.PlaySFX(audioManager.collecting); //add later
+
 
             } 
             if ((this.gameObject.tag == "Potion")){
@@ -39,12 +49,18 @@ public class CakePotionCollision : MonoBehaviour
                 PotionIcon.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
 
+                //play collection sound effect
+                // audioManager.PlaySFX(audioManager.collecting); //add later
+
             } 
             if ((this.gameObject.tag == "Axe")){
 
                 //Axe icon should appear on HUD/GUI
                 AxeIcon.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
+
+                //play collection sound effect
+                // audioManager.PlaySFX(audioManager.collecting); //add later
             }
 
         }

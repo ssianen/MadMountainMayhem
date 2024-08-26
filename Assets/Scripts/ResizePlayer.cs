@@ -21,6 +21,12 @@ public class ResizePlayer : MonoBehaviour {
     private Vector3 regularVector = new Vector3(1.0f, 1.0f, 1.0f);
     private Vector3 largeVector = new Vector3(2.0f, 2.0f, 2.0f);
 
+    AudioManager audioManager;
+
+    private void Awake() {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start() {   
 
     }
@@ -38,6 +44,9 @@ public class ResizePlayer : MonoBehaviour {
 
                 regularSized = false;
                 largeSized = true;
+
+                //Play sound
+                audioManager.PlaySFX(audioManager.growing);
             }
         } 
         
@@ -52,6 +61,9 @@ public class ResizePlayer : MonoBehaviour {
 
                 regularSized = false;
                 smallSized = true;
+
+                //Play sound
+                audioManager.PlaySFX(audioManager.shrinking);
             } 
 
         } else if (CakeIcon.activeInHierarchy && PotionIcon.activeInHierarchy){
@@ -67,6 +79,9 @@ public class ResizePlayer : MonoBehaviour {
                     regularSized = false;
                     largeSized = true;
 
+                    //Play sound
+                    audioManager.PlaySFX(audioManager.growing);
+
                 } else if (smallSized) {
 
                     //Grow from small to regular 
@@ -74,6 +89,9 @@ public class ResizePlayer : MonoBehaviour {
                     
                     smallSized = false;
                     regularSized = true;
+
+                    //Play sound
+                    audioManager.PlaySFX(audioManager.growing);
 
                 }
 
@@ -88,6 +106,9 @@ public class ResizePlayer : MonoBehaviour {
                     regularSized = false;
                     smallSized = true;
 
+                    //Play sound
+                    audioManager.PlaySFX(audioManager.shrinking);
+
 
                 } else if (largeSized) {
 
@@ -96,6 +117,10 @@ public class ResizePlayer : MonoBehaviour {
                     
                     largeSized = false;
                     regularSized = true;
+
+                    //Play sound
+                    audioManager.PlaySFX(audioManager.shrinking);
+
 
                 }
             }  
