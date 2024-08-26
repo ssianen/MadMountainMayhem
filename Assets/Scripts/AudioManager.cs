@@ -13,13 +13,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip growing;
     public AudioClip shrinking;
 
-    public AudioClip chopping; //add later
+    public AudioClip chopping;
 
-    public AudioClip collecting; //add later
+    public AudioClip collecting;
 
     public void Start(){
-        // musicSource.clip = background; //add later
-        // musicSource.Play();
+        musicSource.clip = background;
+        musicSource.Play();
     }
 
     public void PlaySFX(AudioClip clip) {
