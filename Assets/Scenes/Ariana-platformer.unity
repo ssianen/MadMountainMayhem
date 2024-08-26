@@ -1429,7 +1429,7 @@ MonoBehaviour:
   regularSizedSpeed: 6
   maxRotation: 180
   jumpForce: 7
-  smallSizedJumpMult: 0.75
+  smallSizedJumpMult: 1
   largeSizedJumpMult: 2
   regularSizedJump: 7
   jumpCheckPos: {fileID: 731029920}
