@@ -5,6 +5,8 @@ using UnityEngine;
 public class Chopping : MonoBehaviour
 {
     public GameObject AxeIcon;
+
+    public GameObject AxeOnPlayer;
     AudioManager audioManager;
 
      private void Awake() {
@@ -12,6 +14,7 @@ public class Chopping : MonoBehaviour
     }
 
     void Start() {   
+        AxeOnPlayer.SetActive(false);
 
     }
 
@@ -20,9 +23,9 @@ public class Chopping : MonoBehaviour
         //Chopping (when the axe is unlocked)
         if (AxeIcon.activeInHierarchy && Input.GetKeyDown(KeyCode.X)) { //Can't be large when trying to chop wood, right? how are players supposed to know that though?
 
-            // tree slowly fades
-
             //axe appears on player as if holding it
+            AxeOnPlayer.SetActive(true);
+
         }
     }
 
@@ -32,6 +35,8 @@ public class Chopping : MonoBehaviour
 
         //play sound effect 
         audioManager.PlaySFX(audioManager.chopping);
+
+        // tree slowly fades
 
     }
 }
