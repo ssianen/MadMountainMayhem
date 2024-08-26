@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110909068}
   m_Layer: 0
-  m_Name: Mushroom1
+  m_Name: Mushroom2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1033,10 +1033,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 2029279080}
   SFXSource: {fileID: 2121590821}
+  background: {fileID: 8300000, guid: 5bd1fcf98a6064856898185ae72919c0, type: 3}
   growing: {fileID: 8300000, guid: 5d86328c7e579448caae116c036fbd02, type: 3}
   shrinking: {fileID: 8300000, guid: ec765ee2eb59a41f8824d29742c1a3e3, type: 3}
-  chopping: {fileID: 0}
-  collecting: {fileID: 0}
+  chopping: {fileID: 8300000, guid: e7fd68afafe934c499bb6fb095610f2f, type: 3}
+  collecting: {fileID: 8300000, guid: c6acd4ee4e6be4e7e8b5f891319b8ac7, type: 3}
 --- !u!4 &188812365
 Transform:
   m_ObjectHideFlags: 0
@@ -1867,7 +1868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452614351}
   m_Layer: 0
-  m_Name: Mushroom1 (3)
+  m_Name: Mushroom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3116,7 +3117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632777918}
   m_Layer: 0
-  m_Name: Mushroom1 (2)
+  m_Name: Mushroom4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3340,7 +3341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CakeIcon: {fileID: 461545964}
   PotionIcon: {fileID: 659222312}
-  AxeIcon: {fileID: 1329368448}
 --- !u!1 &656151414
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,7 +5564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CakeIcon: {fileID: 461545964}
   PotionIcon: {fileID: 659222312}
-  AxeIcon: {fileID: 1329368448}
 --- !u!1 &1462879358
 GameObject:
   m_ObjectHideFlags: 0
@@ -6380,7 +6379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725274226}
   m_Layer: 0
-  m_Name: Mushroom1 (1)
+  m_Name: Mushroom3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8443,12 +8442,12 @@ SceneRoots:
   - {fileID: 1112911985}
   - {fileID: 2132796107}
   - {fileID: 1094709162}
-  - {fileID: 1725274226}
   - {fileID: 452614351}
-  - {fileID: 632777918}
   - {fileID: 110909068}
-  - {fileID: 1783374055}
+  - {fileID: 1725274226}
+  - {fileID: 632777918}
   - {fileID: 1605338340}
+  - {fileID: 1783374055}
   - {fileID: 1831687556}
   - {fileID: 655825509}
   - {fileID: 1457756704}

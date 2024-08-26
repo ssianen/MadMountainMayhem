@@ -11,8 +11,6 @@ public class CakePotionCollision : MonoBehaviour
 
     public GameObject PotionIcon;
 
-    public GameObject AxeIcon;
-
     AudioManager audioManager;
 
     private void Awake() {
@@ -23,7 +21,6 @@ public class CakePotionCollision : MonoBehaviour
     void Start() {
         CakeIcon.SetActive(false);
         PotionIcon.SetActive(false);
-        AxeIcon.SetActive(false);
     }
 
     //Runs every time player collides with rigidbody (of cake or potion)
@@ -39,7 +36,7 @@ public class CakePotionCollision : MonoBehaviour
                 this.gameObject.SetActive(false); //item in scene disappears
 
                 //play collection sound effect
-                // audioManager.PlaySFX(audioManager.collecting); //add later
+                audioManager.PlaySFX(audioManager.collecting);
 
 
             } 
@@ -50,18 +47,9 @@ public class CakePotionCollision : MonoBehaviour
                 this.gameObject.SetActive(false); //item in scene disappears
 
                 //play collection sound effect
-                // audioManager.PlaySFX(audioManager.collecting); //add later
+                audioManager.PlaySFX(audioManager.collecting);
 
             } 
-            if ((this.gameObject.tag == "Axe")){
-
-                //Axe icon should appear on HUD/GUI
-                AxeIcon.SetActive(true);
-                this.gameObject.SetActive(false); //item in scene disappears
-
-                //play collection sound effect
-                // audioManager.PlaySFX(audioManager.collecting); //add later
-            }
 
         }
     }

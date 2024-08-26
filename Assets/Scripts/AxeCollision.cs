@@ -9,6 +9,11 @@ public class AxeCollision : MonoBehaviour
 
     public GameObject AxeIcon;
     
+    AudioManager audioManager;
+
+    private void Awake() {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start() {
         AxeIcon.SetActive(false);
@@ -25,6 +30,9 @@ public class AxeCollision : MonoBehaviour
                 //Axe icon should appear on HUD/GUI
                 AxeIcon.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
+
+                //play collection sound effect
+                audioManager.PlaySFX(audioManager.collecting);
             }
 
         }
