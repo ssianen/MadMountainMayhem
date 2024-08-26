@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc97367604c12db458ec10d6031978c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 3
+  changeTime: 20
   sceneName: final-platformer
 --- !u!4 &447746268
 Transform:
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: d7db75236bdc29d4e9814f410c7e38f7, type: 2}
+  m_Texture: {fileID: 8400000, guid: be7a950e1b76a6f4fa64eb90b6e963ed, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -427,11 +427,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896770826}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a96e18e96cfade646bc496718143b75e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 11719b9d0dec8244d8fea6eb195f1dbb, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: d7db75236bdc29d4e9814f410c7e38f7, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: be7a950e1b76a6f4fa64eb90b6e963ed, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
