@@ -12,6 +12,7 @@ TagManager:
   - Potion
   - Axe
   - CakeIcon
+  - Audio
   layers:
   - Default
   - TransparentFX
