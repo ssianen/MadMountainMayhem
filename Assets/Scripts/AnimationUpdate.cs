@@ -24,8 +24,8 @@ public class AnimationUpdate : MonoBehaviour
         Vector3 newVelocity = moveDirectionVert * 2;
         // Animations
         
-        bool isSprinting = FindObjectOfType<PlayerMovememt>().GetSprint();
-        bool isJumping = FindObjectOfType<PlayerMovememt>().GetJump();
+        bool isSprinting = FindObjectOfType<PlayerMovement>().GetSprint();
+        bool isJumping = FindObjectOfType<PlayerMovement>().GetJump();
 
         if (isJumping) {
             animatorVal.SetBool("Jump", true);
@@ -50,7 +50,7 @@ public class AnimationUpdate : MonoBehaviour
             animatorVal.SetBool("Forward", true);
         }
 
-        if(FindObjectOfType<PlayerMovememt>().GetVelocity().x == 0 && FindObjectOfType<PlayerMovememt>().GetVelocity().z == 0){
+        if(FindObjectOfType<PlayerMovement>().GetVelocity().x == 0 && FindObjectOfType<PlayerMovement>().GetVelocity().z == 0){
             animatorVal.SetFloat("Speed", 0);
         }
         else if (isSprinting){
