@@ -37,7 +37,7 @@ public class CakePotionCollision : MonoBehaviour
 
                 //play collection sound effect
                 audioManager.PlaySFX(audioManager.collecting);
-                // Add an if here so it only plays the sound effect in level/scene 1 when first collected
+                
 
 
             } 
@@ -49,7 +49,7 @@ public class CakePotionCollision : MonoBehaviour
 
                 //play collection sound effect
                 audioManager.PlaySFX(audioManager.collecting);
-                // Add an if here so it only plays the sound effect in level/scene 1 when first collected
+                
             } 
 
         }
