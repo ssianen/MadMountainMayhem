@@ -4154,7 +4154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveAmount: {x: 2, y: 0, z: 10}
-  smoothTime: 2.4
+  smoothTime: 1.4
   cyclic: 1
 --- !u!1 &702793671
 GameObject:
