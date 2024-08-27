@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscenes/Intro-Cutscene.unity
     guid: 8b49ea6d8601d974faa4e7f54709266d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/final-platformer.unity
     guid: 9fb32bbe4a7b03647ba9efe77140cb9e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/final-level-two.unity
     guid: 58120415548a7430593804ecd0bdd4cf
   - enabled: 1
