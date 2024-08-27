@@ -10,7 +10,7 @@ public class MovingPlatform : MonoBehaviour
         if(collisionInfo.gameObject.CompareTag("MovingPlatform")){
 
             if(Vector3.Dot(collisionInfo.GetContact(0).normal, Vector3.up) > 0.5f){
-                transform.parent = collisionInfo.collider.transform;
+                transform.parent = collisionInfo.collider.transform.parent;
             }
         }
     }
