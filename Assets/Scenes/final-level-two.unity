@@ -4498,8 +4498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b7f0421375b403799ae9dd579ad35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CakeIcon: {fileID: 0}
-  PotionIcon: {fileID: 0}
+  CakeIcon: {fileID: 767449023}
+  PotionIcon: {fileID: 1116982117}
 --- !u!1001 &584215435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5549,7 +5549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AxeOnPlayer: {fileID: 2073774739}
-  AxeIcon: {fileID: 0}
+  AxeIcon: {fileID: 2012734580}
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 756222623}
   woodCountText: {fileID: 156907998}
@@ -6996,7 +6996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AxeOnPlayer: {fileID: 2073774739}
-  AxeIcon: {fileID: 0}
+  AxeIcon: {fileID: 2012734580}
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 963979750}
   woodCountText: {fileID: 156907998}
@@ -8130,7 +8130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AxeOnPlayer: {fileID: 2073774739}
-  AxeIcon: {fileID: 0}
+  AxeIcon: {fileID: 2012734580}
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 1173032900}
   woodCountText: {fileID: 156907998}
@@ -11061,7 +11061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AxeOnPlayer: {fileID: 2073774739}
-  AxeIcon: {fileID: 0}
+  AxeIcon: {fileID: 2012734580}
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 1515450885}
   woodCountText: {fileID: 156907998}
@@ -13923,7 +13923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AxeOnPlayer: {fileID: 2073774739}
-  AxeIcon: {fileID: 0}
+  AxeIcon: {fileID: 2012734580}
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 1880732864}
   woodCountText: {fileID: 156907998}
