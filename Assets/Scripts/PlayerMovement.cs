@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJump = false;
     private bool isSprint = false;
     public float sprintMult;
+    public float shroomForce;
 
     public Transform cam;
 
@@ -63,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
-        AssignSize();
+        int playerSize = AssignSize();
 
         // Movement direction
         Vector3 moveDirection = camForward * vertical + camRight * horizontal;
@@ -95,15 +96,33 @@ public class PlayerMovement : MonoBehaviour
         newVelocity.y = rb.velocity.y; // Preserve vertical velocity for jumping/falling
         rb.velocity = newVelocity;
 
-        if(isJump && (Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground")).Length > 0))
+        float jumpOverlap;
+        if (playerSize >= 2) {
+            jumpOverlap = Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground", "ShroomBounce")).Length;
+        } else {
+            jumpOverlap = Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground")).Length;
+        }
+
+        if(isJump && jumpOverlap > 0)
         {
             rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
             isJump = false;
         }
 
+        if(playerSize == 1 && (Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("ShroomBounce")).Length > 0))
+        {
+            rb.AddForce(new Vector3(0f, shroomForce, 0f), ForceMode.Impulse);
+            isJump = false;
+        }
+
+        // if(Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("ShroomBounce")).Length > 0)
+        // {
+        //     rb.AddForce(new Vector3(0f, shroomForce, 0f), ForceMode.Impulse);
+        // }
+
     }
 
-    private void AssignSize() {
+    private int AssignSize() {
         int size = FindObjectOfType<ResizePlayer>().GetSize();
         if (size == 1) {
             maxSpeed = smallSizedSpeedMult * regularSizedSpeed;
@@ -117,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             Debug.Log("Error: Size variables assigned incorrectly");
         }
+        return size;
     }
 
     public bool GetSprint() {
@@ -124,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public bool GetJump() {
-        return Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground")).Length <= 0;
+        return Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground", "ShroomBounce")).Length <= 0;
     }
 
     public Vector3 GetVelocity() {

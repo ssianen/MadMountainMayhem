@@ -1770,6 +1770,7 @@ MonoBehaviour:
   regularSizedJump: 7
   jumpCheckPos: {fileID: 731029920}
   sprintMult: 2
+  shroomForce: 20
   cam: {fileID: 2125981542}
 --- !u!54 &1091359858
 Rigidbody:
@@ -2079,7 +2080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1190915319
 Transform:
   m_ObjectHideFlags: 0
@@ -2089,7 +2090,7 @@ Transform:
   m_GameObject: {fileID: 1190915318}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5876942, y: 41.316887, z: -12.796164}
+  m_LocalPosition: {x: 6, y: 25.37, z: -12.796164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
