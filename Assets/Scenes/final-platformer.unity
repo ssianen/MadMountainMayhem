@@ -2663,7 +2663,7 @@ GameObject:
   - component: {fileID: 461545967}
   - component: {fileID: 461545966}
   m_Layer: 5
-  m_Name: Cake
+  m_Name: CakeIcon
   m_TagString: Cake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4492,7 +4492,7 @@ GameObject:
   - component: {fileID: 659222315}
   - component: {fileID: 659222314}
   m_Layer: 5
-  m_Name: Potion
+  m_Name: PotionIcon
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7997,7 +7997,7 @@ GameObject:
   - component: {fileID: 1329368451}
   - component: {fileID: 1329368450}
   m_Layer: 5
-  m_Name: Axe
+  m_Name: AxeIcon
   m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13332,9 +13332,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.23
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -14463,7 +14463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125981539}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.04005943, y: 0.4214738, z: 0.018640624, w: 0.90576357}
+  m_LocalRotation: {x: -0.040059417, y: 0.42147365, z: 0.018640611, w: 0.9057636}
   m_LocalPosition: {x: 58.439964, y: 0.5, z: 52.7078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
