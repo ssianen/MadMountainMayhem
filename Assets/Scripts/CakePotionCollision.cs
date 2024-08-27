@@ -37,6 +37,7 @@ public class CakePotionCollision : MonoBehaviour
 
                 //play collection sound effect
                 audioManager.PlaySFX(audioManager.collecting);
+                
 
 
             } 
@@ -48,7 +49,7 @@ public class CakePotionCollision : MonoBehaviour
 
                 //play collection sound effect
                 audioManager.PlaySFX(audioManager.collecting);
-
+                
             } 
 
         }

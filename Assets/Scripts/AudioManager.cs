@@ -12,10 +12,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip background;
     public AudioClip growing;
     public AudioClip shrinking;
-
     public AudioClip chopping;
-
     public AudioClip collecting;
+    public AudioClip bounce;
 
     public void Start(){
         musicSource.clip = background;
