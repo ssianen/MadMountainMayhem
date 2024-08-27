@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 20
-  sceneName: Outro-Cutscene
+  sceneName: final-platformer
 --- !u!4 &447746268
 Transform:
   m_ObjectHideFlags: 0
