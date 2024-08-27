@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Peasant_Girl.001
-    second: {fileID: -1328650537103558485, guid: a4f66c9f805354b45bc7038b2fd6abbc, type: 3}
+    second: {fileID: 2100000, guid: 2da4535229e3a4347962372eb5a3acad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
