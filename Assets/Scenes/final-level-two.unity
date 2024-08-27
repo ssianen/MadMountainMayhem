@@ -6101,7 +6101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AxeIcon: {fileID: 1377522175}
-  XChopGUI: {fileID: 0}
+  XChopGUI: {fileID: 2087146046}
 --- !u!65 &873631167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12765,9 +12765,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CakeIcon: {fileID: 2001753136}
-  EGrowGUI: {fileID: 0}
+  EGrowGUI: {fileID: 526722838}
   PotionIcon: {fileID: 674021158}
-  QShrinkGUI: {fileID: 0}
+  QShrinkGUI: {fileID: 1173773426}
 --- !u!54 &1828083741
 Rigidbody:
   m_ObjectHideFlags: 0
