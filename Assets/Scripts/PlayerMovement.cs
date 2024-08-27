@@ -25,8 +25,12 @@ public class PlayerMovement : MonoBehaviour
     private bool isSprint = false;
     public float sprintMult;
     public float shroomForce;
-
     public Transform cam;
+    AudioManager audioManager;
+
+    private void Awake() {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
+        // Finds player size and sets speeds
         int playerSize = AssignSize();
 
         // Movement direction
@@ -98,31 +103,39 @@ public class PlayerMovement : MonoBehaviour
 
         float jumpOverlap;
         if (playerSize >= 2) {
+            // If player is not small, they can jump on the mushroom
             jumpOverlap = Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground", "ShroomBounce")).Length;
         } else {
+            // If the player is small, they cannot jump on the mushroom
             jumpOverlap = Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground")).Length;
         }
 
         if(isJump && jumpOverlap > 0)
         {
+            // Lauch player by jump amount
             rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
             isJump = false;
         }
 
+        // If player is small and touching shroom
         if(playerSize == 1 && (Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("ShroomBounce")).Length > 0))
         {
+            // Play bounce sound effect
+            audioManager.PlaySFX(audioManager.bounce);
+
+            // Lauch the player upwards
             rb.AddForce(new Vector3(0f, shroomForce, 0f), ForceMode.Impulse);
-            isJump = false;
         }
-
-        // if(Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("ShroomBounce")).Length > 0)
-        // {
-        //     rb.AddForce(new Vector3(0f, shroomForce, 0f), ForceMode.Impulse);
-        // }
-
     }
 
+    /// <summary>
+    /// Sets player speeds according to player size found in ResizePlayer script
+    /// </summary>
+    /// <returns>
+    /// Size of the player, with 1 for small, 2 for regular, and 3 for large
+    /// </returns>
     private int AssignSize() {
+        // Calls GetSize() from resizePlayer script to get the current player size
         int size = FindObjectOfType<ResizePlayer>().GetSize();
         if (size == 1) {
             maxSpeed = smallSizedSpeedMult * regularSizedSpeed;
@@ -138,11 +151,17 @@ public class PlayerMovement : MonoBehaviour
         }
         return size;
     }
-
+    
     public bool GetSprint() {
         return isSprint;
     }
 
+    /// <summary>
+    /// Indicates if player is in the air or not
+    /// </summary>
+    /// <returns>
+    /// True if player is in the air, false otherwise
+    /// </returns>
     public bool GetJump() {
         return Physics.OverlapSphere(jumpCheckPos.position, 0.05f, LayerMask.GetMask("Ground", "ShroomBounce")).Length <= 0;
     }

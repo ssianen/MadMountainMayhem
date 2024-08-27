@@ -3863,7 +3863,8 @@ MonoBehaviour:
   growing: {fileID: 8300000, guid: 5d86328c7e579448caae116c036fbd02, type: 3}
   shrinking: {fileID: 8300000, guid: ec765ee2eb59a41f8824d29742c1a3e3, type: 3}
   chopping: {fileID: 0}
-  collecting: {fileID: 0}
+  collecting: {fileID: 8300000, guid: c6acd4ee4e6be4e7e8b5f891319b8ac7, type: 3}
+  bounce: {fileID: 8300000, guid: 2291e539d8f051e4497656b497ae98e1, type: 3}
 --- !u!4 &2130777580
 Transform:
   m_ObjectHideFlags: 0
