@@ -8,6 +8,7 @@ public class AxePlayerCollision : MonoBehaviour
 {
 
     public GameObject AxeIcon;
+    public GameObject XChopGUI;
     
     AudioManager audioManager;
 
@@ -17,6 +18,7 @@ public class AxePlayerCollision : MonoBehaviour
 
     void Start() {
         AxeIcon.SetActive(false);
+        XChopGUI.SetActive(false);
     }
 
     //Runs every time player collides with rigidbody (of cake or potion)
@@ -29,6 +31,8 @@ public class AxePlayerCollision : MonoBehaviour
 
                 //Axe icon should appear on HUD/GUI
                 AxeIcon.SetActive(true);
+                XChopGUI.SetActive(true);
+
                 this.gameObject.SetActive(false); //item in scene disappears
 
                 //play collection sound effect

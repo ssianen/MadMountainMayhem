@@ -8,8 +8,10 @@ public class CakePotionCollision : MonoBehaviour
 {
 
     public GameObject CakeIcon;
+    public GameObject EGrowGUI;
 
     public GameObject PotionIcon;
+    public GameObject QShrinkGUI;
 
     AudioManager audioManager;
 
@@ -20,7 +22,9 @@ public class CakePotionCollision : MonoBehaviour
 
     void Start() {
         CakeIcon.SetActive(false);
+        EGrowGUI.SetActive(false);
         PotionIcon.SetActive(false);
+        QShrinkGUI.SetActive(false);
     }
 
     //Runs every time player collides with rigidbody (of cake or potion)
@@ -33,6 +37,7 @@ public class CakePotionCollision : MonoBehaviour
 
                 //Cake icon should appear on HUD/GUI
                 CakeIcon.SetActive(true);
+                EGrowGUI.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
 
                 //play collection sound effect
@@ -45,6 +50,7 @@ public class CakePotionCollision : MonoBehaviour
 
                 //Potion icon should appear on HUD/GUI
                 PotionIcon.SetActive(true);
+                QShrinkGUI.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
 
                 //play collection sound effect
