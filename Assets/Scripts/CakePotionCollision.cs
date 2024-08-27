@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class CakePotionCollision : MonoBehaviour
@@ -32,6 +33,12 @@ public class CakePotionCollision : MonoBehaviour
     {
     
         if (other.gameObject.tag == "Player") { 
+
+            // Create a temporary reference to the current scene.
+            Scene currentScene = SceneManager.GetActiveScene();
+
+            // Retrieve the name of this scene.
+            string curSceneName = currentScene.name;
             
             if (this.gameObject.tag == "Cake") { 
 
@@ -40,10 +47,11 @@ public class CakePotionCollision : MonoBehaviour
                 EGrowGUI.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
 
-                //play collection sound effect
-                audioManager.PlaySFX(audioManager.collecting);
-                
-
+                if (curSceneName == "final-platformer") 
+                {
+                    //play collection sound effect
+                    audioManager.PlaySFX(audioManager.collecting);
+                }
 
             } 
             if ((this.gameObject.tag == "Potion")){
@@ -53,14 +61,14 @@ public class CakePotionCollision : MonoBehaviour
                 QShrinkGUI.SetActive(true);
                 this.gameObject.SetActive(false); //item in scene disappears
 
-                //play collection sound effect
-                audioManager.PlaySFX(audioManager.collecting);
-                
+                if (curSceneName == "final-platformer") 
+                {
+                    //play collection sound effect
+                    audioManager.PlaySFX(audioManager.collecting);
+                }                
             } 
-
         }
     }
-    
 }
 
 
