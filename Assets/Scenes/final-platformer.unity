@@ -5154,7 +5154,7 @@ Transform:
   m_GameObject: {fileID: 655825508}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.22, y: 15.31, z: 45.86}
+  m_LocalPosition: {x: 83.22, y: 14.29, z: 45.86}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5207,8 +5207,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8, y: 0.6, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.18945923, y: 0.18880253, z: 0.13813019}
+  m_Center: {x: -0.00012360215, y: -0.013790798, z: -0.0075050355}
 --- !u!114 &655825512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5222,7 +5222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CakeIcon: {fileID: 461545964}
+  EGrowGUI: {fileID: 0}
   PotionIcon: {fileID: 659222312}
+  QShrinkGUI: {fileID: 0}
 --- !u!1 &659222312
 GameObject:
   m_ObjectHideFlags: 0
@@ -10585,7 +10587,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CakeIcon: {fileID: 461545964}
+  EGrowGUI: {fileID: 0}
   PotionIcon: {fileID: 659222312}
+  QShrinkGUI: {fileID: 0}
 --- !u!1 &1473351035
 GameObject:
   m_ObjectHideFlags: 0
@@ -12167,27 +12171,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bbb3a38742169a4abd045d20e527d9d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bbb3a38742169a4abd045d20e527d9d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bbb3a38742169a4abd045d20e527d9d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bbb3a38742169a4abd045d20e527d9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.022
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bbb3a38742169a4abd045d20e527d9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bbb3a38742169a4abd045d20e527d9d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.061
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bbb3a38742169a4abd045d20e527d9d, type: 3}
       propertyPath: m_LocalRotation.w
