@@ -13,6 +13,7 @@ TagManager:
   - Axe
   - CakeIcon
   - Audio
+  - CuttableTree
   layers:
   - Default
   - TransparentFX

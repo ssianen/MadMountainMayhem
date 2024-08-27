@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class AxeCollision : MonoBehaviour
+public class AxePlayerCollision : MonoBehaviour
 {
 
     public GameObject AxeIcon;
