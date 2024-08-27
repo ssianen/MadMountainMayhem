@@ -50,7 +50,11 @@ public class AnimationUpdate : MonoBehaviour
             animatorVal.SetBool("Forward", true);
         }
 
-        if(FindObjectOfType<PlayerMovement>().GetVelocity().x == 0 && FindObjectOfType<PlayerMovement>().GetVelocity().z == 0){
+        // if(FindObjectOfType<PlayerMovement>().GetVelocity().x == 0 && FindObjectOfType<PlayerMovement>().GetVelocity().z == 0){
+        //     animatorVal.SetFloat("Speed", 0);
+        // }
+
+        if(horizontal== 0 && vertical == 0){
             animatorVal.SetFloat("Speed", 0);
         }
         else if (isSprinting){
