@@ -8,8 +8,12 @@ using UnityEngine.Events;
 public class ResizePlayer : MonoBehaviour {
 
     public GameObject CakeIcon;
-
     public GameObject PotionIcon;
+    
+    //highlights to indicate current size on GUI icon
+    public GameObject NowSmall;
+    public GameObject NowReg;
+    public GameObject NowLarge;
     
 
     private bool smallSized = false;
@@ -28,6 +32,9 @@ public class ResizePlayer : MonoBehaviour {
     }
 
     void Start() {   
+        NowSmall.SetActive(false);
+        NowReg.SetActive(true);
+        NowLarge.SetActive(false);
 
     }
 
@@ -43,7 +50,10 @@ public class ResizePlayer : MonoBehaviour {
                 transform.localScale = largeVector;
 
                 regularSized = false;
+                NowReg.SetActive(false);
+
                 largeSized = true;
+                NowLarge.SetActive(true);
 
                 //Play sound
                 audioManager.PlaySFX(audioManager.growing);
@@ -60,7 +70,10 @@ public class ResizePlayer : MonoBehaviour {
                 transform.localScale = smallVector;
 
                 regularSized = false;
+                NowReg.SetActive(false);
+
                 smallSized = true;
+                NowSmall.SetActive(true);
 
                 //Play sound
                 audioManager.PlaySFX(audioManager.shrinking);
@@ -77,7 +90,10 @@ public class ResizePlayer : MonoBehaviour {
                     transform.localScale = largeVector;
 
                     regularSized = false;
+                    NowReg.SetActive(false);
+
                     largeSized = true;
+                    NowLarge.SetActive(true);
 
                     //Play sound
                     audioManager.PlaySFX(audioManager.growing);
@@ -88,7 +104,10 @@ public class ResizePlayer : MonoBehaviour {
                     transform.localScale = regularVector;
                     
                     smallSized = false;
+                    NowSmall.SetActive(false);
+
                     regularSized = true;
+                    NowReg.SetActive(true);
 
                     //Play sound
                     audioManager.PlaySFX(audioManager.growing);
@@ -104,7 +123,10 @@ public class ResizePlayer : MonoBehaviour {
                     transform.localScale = smallVector;
 
                     regularSized = false;
+                    NowReg.SetActive(false);
+
                     smallSized = true;
+                    NowSmall.SetActive(true);
 
                     //Play sound
                     audioManager.PlaySFX(audioManager.shrinking);
@@ -116,7 +138,10 @@ public class ResizePlayer : MonoBehaviour {
                     transform.localScale = regularVector;
                     
                     largeSized = false;
+                    NowLarge.SetActive(false);
+
                     regularSized = true;
+                    NowReg.SetActive(true);
 
                     //Play sound
                     audioManager.PlaySFX(audioManager.shrinking);
