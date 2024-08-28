@@ -15,9 +15,12 @@ public class AxeTreeCollision : MonoBehaviour
 
     public Text woodCountText; 
 
-    private int woodCountInt = 0;
+    private bool axeOn = false;
 
-    public bool axeOn = false;
+    private int woodChoppedPerTree = 0;
+
+    private int totalWoodChopped; // per tree
+
     
 
     AudioManager audioManager;
@@ -29,7 +32,6 @@ public class AxeTreeCollision : MonoBehaviour
     void Start() {   
         AxeOnPlayer.SetActive(false);
         WoodInventory.SetActive(false);
-        woodCountText.text = woodCountInt.ToString();
         treeToCut.SetActive(true);
     }
 
@@ -59,27 +61,27 @@ public class AxeTreeCollision : MonoBehaviour
             
             if ((this.gameObject.tag == "CuttableTree")) {
                 
-                if (woodCountInt < 4) {
+                if (woodChoppedPerTree < 4) {
 
                     //play sound effect 
                     audioManager.PlaySFX(audioManager.chopping);
 
                     //count up to 4 wood per tree the script is applied to 
-                    woodCountInt++;
+                    woodChoppedPerTree++;
 
                     //update count in inventory GUI
-                    woodCountText.text = woodCountInt.ToString();
+                    WoodCountManager.totalChopped += 1;
 
                 } else {
                 
+                //When player has collected enough wood (20), message appears saying "enough wood collected"
+                
+                //axe on player should disappear entirely 
+                AxeOnPlayer.SetActive(false);
+
                 //tree disappears
                 treeToCut.SetActive(false);
 
-                //wood collected GUI message lower right screen? "All wood collected from this tree"
-
-                //When player has collected enough wood (20), axe on player should disappear entirely 
-
-                //Message should pop up saying enough wood has been collected
 
                 }
             }
