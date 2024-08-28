@@ -22,6 +22,7 @@ public class BridgePlayerCollision : MonoBehaviour
             
             if ((this.gameObject.tag == "Bridge" && string.Equals(woodCountText.text, "20"))){
 
+                //broken sign and bridge in scene disappears
                 fixMeSign.SetActive(false);
                 brokenBridge.SetActive(false); //broken bridge in scene disappears
 

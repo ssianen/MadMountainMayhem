@@ -15,6 +15,7 @@ TagManager:
   - Audio
   - CuttableTree
   - Bridge
+  - AxeOnGround
   layers:
   - Default
   - TransparentFX

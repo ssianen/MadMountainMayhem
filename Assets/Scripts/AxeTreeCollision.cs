@@ -15,13 +15,10 @@ public class AxeTreeCollision : MonoBehaviour
 
     public Text woodCountText; 
 
-    private bool axeOn = false;
+    private bool axeOn;
 
     private int woodChoppedPerTree = 0;
 
-    private int totalWoodChopped; // per tree
-
-    
 
     AudioManager audioManager;
 
@@ -33,6 +30,7 @@ public class AxeTreeCollision : MonoBehaviour
         AxeOnPlayer.SetActive(false);
         WoodInventory.SetActive(false);
         treeToCut.SetActive(true);
+        axeOn = false;
     }
 
     void Update() {
@@ -55,7 +53,7 @@ public class AxeTreeCollision : MonoBehaviour
     }
 
     //Runs every time axe collides with rigidbody of tree
-    void OnTriggerStay(Collider other) //should this be OnTriggerStay instead? ASK Ariana?!
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Axe") { 
             
@@ -73,8 +71,6 @@ public class AxeTreeCollision : MonoBehaviour
                     WoodCountManager.totalChopped += 1;
 
                 } else {
-                
-                //When player has collected enough wood (20), message appears saying "enough wood collected"
                 
                 //axe on player should disappear entirely 
                 AxeOnPlayer.SetActive(false);
