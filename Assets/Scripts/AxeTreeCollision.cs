@@ -57,7 +57,7 @@ public class AxeTreeCollision : MonoBehaviour
     {
         if (other.gameObject.tag == "Axe") { 
             
-            if ((this.gameObject.tag == "CuttableTree")) {
+            if ((this.gameObject.tag == "CuttableTree" && axeOn == true)) {
                 
                 if (woodChoppedPerTree < 4) {
 
