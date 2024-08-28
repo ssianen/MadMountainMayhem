@@ -3468,7 +3468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 416274996}
   - component: {fileID: 416274995}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: full-bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3482,7 +3482,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416274994}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c2b059ec3ac80b74c97528e1410ace9a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -11798,7 +11798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbece409f8a48a4782ee182fc1d28df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodCountText: {fileID: 0}
+  woodCountText: {fileID: 156907998}
 --- !u!1 &1560341744
 GameObject:
   m_ObjectHideFlags: 0
@@ -12961,6 +12961,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17edde830b2c03c4380312f9ef12286e, type: 3}
       propertyPath: m_Name
       value: rope_bridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17edde830b2c03c4380312f9ef12286e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 17edde830b2c03c4380312f9ef12286e, type: 3}
       propertyPath: m_IsActive
