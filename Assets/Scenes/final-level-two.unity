@@ -6726,7 +6726,6 @@ MonoBehaviour:
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 963979750}
   woodCountText: {fileID: 156907998}
-  axeOn: 0
 --- !u!1 &978858758
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,7 +8748,6 @@ MonoBehaviour:
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 1173032900}
   woodCountText: {fileID: 156907998}
-  axeOn: 0
 --- !u!1 &1182271310
 GameObject:
   m_ObjectHideFlags: 0
@@ -11645,7 +11643,6 @@ MonoBehaviour:
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 1515450885}
   woodCountText: {fileID: 156907998}
-  axeOn: 0
 --- !u!1001 &1538992392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11798,9 +11795,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1557222409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a39569cf1a454b85900cf27f2178eb6, type: 3}
+  m_Script: {fileID: 11500000, guid: cdbece409f8a48a4782ee182fc1d28df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  woodCountText: {fileID: 0}
 --- !u!1 &1560341744
 GameObject:
   m_ObjectHideFlags: 0
@@ -14497,7 +14495,6 @@ MonoBehaviour:
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 1880732864}
   woodCountText: {fileID: 156907998}
-  axeOn: 0
 --- !u!1 &1893320931
 GameObject:
   m_ObjectHideFlags: 0
@@ -14725,7 +14722,6 @@ MonoBehaviour:
   WoodInventory: {fileID: 1557222409}
   treeToCut: {fileID: 1919623918}
   woodCountText: {fileID: 156907998}
-  axeOn: 0
 --- !u!65 &1919623921
 BoxCollider:
   m_ObjectHideFlags: 0
