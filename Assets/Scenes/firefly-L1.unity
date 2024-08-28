@@ -9558,7 +9558,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 100, z: 100}
+  m_Size: {x: 0, y: 100, z: 156}
   m_Center: {x: 70, y: 0, z: 50}
 --- !u!65 &1942279339
 BoxCollider:
@@ -9600,7 +9600,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 100, z: 100}
+  m_Size: {x: 0, y: 100, z: 179}
   m_Center: {x: -70, y: 0, z: 50}
 --- !u!65 &1942279341
 BoxCollider:
