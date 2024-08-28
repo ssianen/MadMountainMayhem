@@ -16049,6 +16049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   woodCountText: {fileID: 156907998}
+  axeOnPlayer: {fileID: 467377620}
 --- !u!1 &1560341744
 GameObject:
   m_ObjectHideFlags: 0
