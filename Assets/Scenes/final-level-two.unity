@@ -3447,8 +3447,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Warning! \nBroken bridge ahead.\nNeeds repair!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10404,7 +10404,7 @@ GameObject:
   - component: {fileID: 1441829330}
   - component: {fileID: 1441829333}
   - component: {fileID: 1441829332}
-  - component: {fileID: 1441829331}
+  - component: {fileID: 1441829334}
   m_Layer: 3
   m_Name: Graphics
   m_TagString: Untagged
@@ -10427,27 +10427,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1738776021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.849}
---- !u!65 &1441829331
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441829329}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.9999999, y: 1.0000001, z: 0.99999994}
-  m_Center: {x: 0.00000011920929, y: 0, z: 0}
 --- !u!23 &1441829332
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10497,6 +10476,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441829329}
+  m_Mesh: {fileID: 4493585093827132993, guid: cb167e30a55db114ba312369ee5cb31c, type: 3}
+--- !u!64 &1441829334
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441829329}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: cb167e30a55db114ba312369ee5cb31c, type: 3}
 --- !u!1 &1444735092
 GameObject:
@@ -11472,7 +11473,7 @@ Transform:
   m_GameObject: {fileID: 1561972876}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.34, y: 77.38, z: 11.8}
+  m_LocalPosition: {x: 12.4, y: 63.3, z: 4.27}
   m_LocalScale: {x: 18.634789, y: 1, z: 22.679274}
   m_ConstrainProportionsScale: 0
   m_Children: []
