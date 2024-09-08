@@ -8,7 +8,12 @@ public class BridgePlayerCollision : MonoBehaviour
     public GameObject brokenBridge;
     public GameObject fixedBridge;
     public GameObject fixMeSign; 
+    public GameObject woodInventory;
     public Text woodCountText; 
+
+    public GameObject axeIcon;
+
+    public GameObject axeOnPlayer;
 
      void Start() {
         fixMeSign.SetActive(true); 
@@ -22,11 +27,13 @@ public class BridgePlayerCollision : MonoBehaviour
             
             if ((this.gameObject.tag == "Bridge" && string.Equals(woodCountText.text, "20"))){
 
-                //broken sign and bridge in scene disappears
-                fixMeSign.SetActive(false);
+                fixMeSign.SetActive(false); //broken sign disappears
                 brokenBridge.SetActive(false); //broken bridge in scene disappears
 
-                fixedBridge.SetActive(true);
+                fixedBridge.SetActive(true); // fixed bridge in scene appears
+                woodInventory.SetActive(false); //wood inventory disappears
+                axeIcon.SetActive(false); //axe icon disappears
+                axeOnPlayer.SetActive(false); //axe on player disappears
             }
 
         }
