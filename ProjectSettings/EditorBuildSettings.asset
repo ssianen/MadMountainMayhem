@@ -5,25 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TitleMenuLoadingScreens/TitleMenu.unity
     guid: a6cf20c63d46b4c3c81a9336d5365628
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TitleMenuLoadingScreens/LoadingScreen.unity
     guid: 53630fa45fdb04fbbb94147047488ed5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Cutscenes/Intro-Cutscene.unity
     guid: 8b49ea6d8601d974faa4e7f54709266d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/final-platformer.unity
     guid: 9fb32bbe4a7b03647ba9efe77140cb9e
   - enabled: 1
     path: Assets/Scenes/final-level-two.unity
     guid: adc33933dca4a4aa0a10603a64c4d879
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Cutscenes/Outro-Cutscene.unity
     guid: 51afec4354ed5ed48913aa166a0d4fa1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TitleMenuLoadingScreens/EndScreen.unity
     guid: 49b45ceb057234c45a8fda0eb787cea6
   m_configObjects:
