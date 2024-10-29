@@ -59,7 +59,7 @@ public class AxeTreeCollision : MonoBehaviour
             
             if ((this.gameObject.tag == "CuttableTree" && axeOn == true)) {
                 
-                if (woodChoppedPerTree < 4) {
+                while (woodChoppedPerTree < 4) {
 
                     //play sound effect 
                     audioManager.PlaySFX(audioManager.chopping);
@@ -70,17 +70,13 @@ public class AxeTreeCollision : MonoBehaviour
                     //update count in inventory GUI
                     WoodCountManager.totalChopped += 1;
 
-                } else {
+                } 
                 
-                //axe on player should disappear entirely 
-                AxeOnPlayer.SetActive(false);
-
                 //tree disappears
                 treeToCut.SetActive(false);
 
-
-                }
             }
+
         }
 
     }

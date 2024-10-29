@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc97367604c12db458ec10d6031978c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 20
+  changeTime: 16
   sceneName: final-platformer
 --- !u!4 &447746268
 Transform:
@@ -306,7 +306,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &896770826
+--- !u!1 &986260027
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,10 +314,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 896770827}
-  - component: {fileID: 896770830}
-  - component: {fileID: 896770829}
-  - component: {fileID: 896770828}
+  - component: {fileID: 986260028}
+  - component: {fileID: 986260031}
+  - component: {fileID: 986260030}
+  - component: {fileID: 986260029}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -325,13 +325,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &896770827
+--- !u!224 &986260028
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896770826}
+  m_GameObject: {fileID: 986260027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -344,13 +344,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &896770828
+--- !u!114 &986260029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896770826}
+  m_GameObject: {fileID: 986260027}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
@@ -364,26 +364,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: be7a950e1b76a6f4fa64eb90b6e963ed, type: 2}
+  m_Texture: {fileID: 8400000, guid: 2d4a9926990162e4cba9679587fcd34d, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
---- !u!328 &896770829
+--- !u!328 &986260030
 VideoPlayer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896770826}
+  m_GameObject: {fileID: 986260027}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 11719b9d0dec8244d8fea6eb195f1dbb, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 651889843995dfd40a0239856815f585, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: be7a950e1b76a6f4fa64eb90b6e963ed, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 2d4a9926990162e4cba9679587fcd34d, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -405,13 +405,13 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
---- !u!222 &896770830
+--- !u!222 &986260031
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896770826}
+  m_GameObject: {fileID: 986260027}
   m_CullTransparentMesh: 1
 --- !u!1 &1143734325
 GameObject:
@@ -635,7 +635,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 896770827}
+  - {fileID: 986260028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
